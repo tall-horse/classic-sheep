@@ -1,16 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
-using Unity.Rendering;
 
 public class ECSManager : MonoBehaviour
 {
   EntityManager manager;
   public GameObject sheepPrefab;
-  const int numSheep = 15000;
+  const int numSheep = 100000;
   // Start is called before the first frame update
   void Start()
   {
