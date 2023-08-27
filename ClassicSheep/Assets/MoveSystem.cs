@@ -13,9 +13,9 @@ public partial class MoveSystem : SystemBase
     List<Entity> entities = new();
     Entities.WithName("MoveSystem").ForEach((ref Translation position, ref Rotation rotation) =>
     {
-      position.Value += .1f * math.forward(rotation.Value);
-      if (position.Value.z > 50)
-        position.Value.z = -50;
+      position.Value.y += .1f;
+      if (position.Value.y > 100)
+        position.Value.y = 0;
     }).ScheduleParallel();
   }
 }
